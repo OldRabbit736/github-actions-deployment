@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  DEV:
+  DEV-JOB:
     runs-on: ubuntu-latest
     environment: DEV
 
@@ -16,10 +16,10 @@ jobs:
         run: |
           echo "I am running a job in the Dev environment"
 
-  QA:
+  QA-JOB:
     runs-on: ubuntu-latest
     environment: QA
-    needs: DEV
+    needs: DEV-JOB
 
     steps:
       - uses: actions/checkout@v2
@@ -28,10 +28,10 @@ jobs:
         run: |
           echo "I am running a job in the QA environment"
 
-  PROD:
+  PROD-JOB:
     runs-on: ubuntu-latest
     environment: PROD
-    needs: QA
+    needs: QA-JOB
 
     steps:
       - uses: actions/checkout@v2
