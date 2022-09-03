@@ -46,3 +46,15 @@ jobs:
           echo "I am running a job in the PROD environment"
           echo "It's my secret ${{ secrets.MY_SECRET }}"
           echo "It's my another secret ${{ secrets.ANOTHER_SECRET }}"
+
+  ANOTHER-JOB:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a script
+        run: |
+          echo "I am running a job in the PROD environment"
+          echo "It's my secret ${{ secrets.MY_SECRET }}"
+          echo "It's my another secret ${{ secrets.ANOTHER_SECRET }}"
