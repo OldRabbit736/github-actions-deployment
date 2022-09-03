@@ -2,6 +2,7 @@ name: Simple Manual Workflow - Three Env
 
 on:
   workflow_dispatch:
+  pull_request:
 
 jobs:
 
