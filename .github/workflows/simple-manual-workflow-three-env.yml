@@ -15,6 +15,8 @@ jobs:
       - name: Run a script
         run: |
           echo "I am running a job in the Dev environment"
+          echo "It's my secret ${{ secrets.MY_SECRET }}"
+          echo "It's my another secret ${{ secrets.ANOTHER_SECRET }}"
 
   QA-JOB:
     runs-on: ubuntu-latest
